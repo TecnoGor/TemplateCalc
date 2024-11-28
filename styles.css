@@ -220,7 +220,7 @@ html {
 }
 
 .content-banner p {
-	color: var(--primary-color);
+	color: var(--background-color);
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
 	font-weight: 500;
