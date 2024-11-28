@@ -2,68 +2,59 @@
 	include('templates/header.php');
 ?>
 		<section class="banner">
-			<section class="container blogs" style="height: 50%; padding-top: 8rem;">
-				<h1 class="heading-1">Servicios Postales</h1>
 
-				<div class="container-blogs">
-					<div class="card-blog">
-						<div class="container-img text-center">
-							<div class="blog1">
-								<h1 class="position-absolute top-50 start-50 translate-middle text-light">Servicios Nacionales</h1>
-							</div>
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="card-blog">
-						<div class="container-img text-center">
-							<div class="blog2">
-								<h1 class="position-absolute top-50 start-50 translate-middle text-light">Servicios Internacionales</h1>
-							</div>
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
+			<!-- <div id="contentBanner"> -->
+
+				<div id="contentTemplates">
+
+				</div>
+
+				<section class="container blogs" id="contentCardsBlogs" style="height: 50%; padding-top: 8rem;">
+
+					<h1 class="heading-1">Servicios Postales</h1>
+
+					<div class="container-blogs">
+
+						<div class="card-blog">
+							<div class="container-img text-center">
+								<div class="blog1">
+									<h1 class="position-absolute top-50 start-50 translate-middle text-light">Servicios Nacionales</h1>
+								</div>
 							</div>
 						</div>
-						
-					</div>
-					<div class="card-blog">
-						<div class="container-img">
-							<div class="blog3">
-								<h1 class="position-absolute top-50 start-50 translate-middle text-light">Fletes</h1>
+
+						<div class="card-blog">
+							<div class="container-img text-center">
+								<div class="blog2">
+									<h1 class="position-absolute top-50 start-50 translate-middle text-light">Servicios Internacionales</h1>
+								</div>
 							</div>
 							
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
 						</div>
-						
+
+						<div class="card-blog">
+							<div class="container-img">
+								<div class="blog3">
+									<h1 class="position-absolute top-50 start-50 translate-middle text-light">Fletes</h1>
+								</div>
+							</div>
+							
+						</div>
 					</div>
+
+				</section>
+
+				<div class="content-banner" id="contentButtonTracking">
+					<p>Tracking de Envios</p>
+					<h2>Rastrea tu paquete con nosotros 🥵😈</h2>
+					<a onclick="containSearch()" style="color: #ffffff; cursor: pointer;"><h4><i class="bi bi-search"></i> Rastrear</h4></a>
 				</div>
-			</section>
-			<div class="content-banner">
-				<p>Tracking de Envios</p>
-				<h2>Rastrea tu paquete con nosotros 🥵😈</h2>
-				<a href="#"><h4>Rastrear</h4></a>
-			</div>
+
+			<!-- </div> -->
+
 		</section>
 
-		<main class="main-content">
+		<!-- <main class="main-content">
 			<section class="container container-features">
 				<div class="card-feature">
 					<i class="fa-solid fa-plane-up"></i>
@@ -95,7 +86,7 @@
 				</div>
 			</section>
 
-		</main>
+		</main> -->
 <?php
 
 	include('templates/footer.php');

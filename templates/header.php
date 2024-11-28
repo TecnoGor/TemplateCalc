@@ -13,4 +13,7 @@
 		<link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
 	</head>
 	<body>
-<?php include('nav.php');?>
+<?php 
+	include('nav.php');
+	require_once('modals/modalEvents.php');
+?>

@@ -77,11 +77,12 @@
 				</div>
 			</div>
 		</footer>
-		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
 		<script src="node_modules/sweetalert2/dist/sweetalert2.js"></script>
 		<script src="node_modules/sweetalert2/dist/sweetalert2.common.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 		<script src="node_modules/bootstrap-icons/font/bootstrap-icons.json"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
