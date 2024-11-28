@@ -1,4 +1,4 @@
-<form method="get" action="" class="container bg-white row g-3 p-3 border border-primary-subtle rounded">
+<form method="get" action="" class="container bg-white position-absolute top-50 start-50 translate-middle row g-3 p-3 border border-primary-subtle rounded">
     <div class="container">
         <h3> - Peso y Unidad</h3>
     </div>

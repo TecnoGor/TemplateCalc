@@ -14,10 +14,10 @@
 				<div class="collapse navbar-collapse justify-content-md-end" id="navbarNavDropdown">
 					<ul class="navbar-nav menu">
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" style="font-size: 15px;" href="#"><i class="bi bi-truck" style="font-size: 15px;"></i>       Rastreo Postal</a>
+							<a class="nav-link" onclick="containSearch()" aria-current="page" style="font-size: 15px;" href="#"><i class="bi bi-truck" style="font-size: 15px;"></i>       Rastreo Postal</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#" style="font-size: 15px;"><i class="bi bi-map"></i>      Servicios Nacionales</a>
+							<a class="nav-link" onclick="servicesNationals()" style="font-size: 15px;"><i class="bi bi-map"></i>      Servicios Nacionales</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#" style="font-size: 15px;"><i class="bi bi-globe"></i>      Servicios Internacionales</a>

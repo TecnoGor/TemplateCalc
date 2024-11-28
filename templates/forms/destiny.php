@@ -1,5 +1,5 @@
 
-<form method="get" action="" class="container bg-white row g-3 p-3 border border-primary-subtle rounded">
+<form method="get" action="" class="container bg-white row position-absolute top-50 start-50 translate-middle g-3 p-3 border border-primary-subtle rounded">
         <div class="container">
             <h3>Origen</h3>
         </div>

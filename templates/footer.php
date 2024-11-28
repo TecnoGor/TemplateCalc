@@ -83,6 +83,8 @@
 		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 		<script src="node_modules/bootstrap-icons/font/bootstrap-icons.json"></script>
+		<script src="js/optionsNational.js"></script>
+		<script src="js/optionsInternational.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>

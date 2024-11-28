@@ -1,15 +1,18 @@
 function servicesNationals() {
-    $.get('./template/modules/servicesNationals.php', function(mensaje, estado){
-        document.getElementById('servicesPostals').innerHTML=mensaje;
-        document.getElementById('ApiRastreo').style="display: none";
+    $.get('./templates/modules/servicesNationals.php', function(mensaje, estado){
+        document.getElementById('contentCardsBlogs').style = 'display:none';
+        document.getElementById('contentButtonTracking').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
+        // document.getElementById('ApiRastreo').style="display: none";
     })
 }
 
 function formEEB() {
 
-     $.get('./template/forms/destiny.php', function(mensaje, estado){
-        document.getElementById('servicesForm').innerHTML=mensaje;
-        document.getElementById('menuNational').style = 'display:none';
+     $.get('./templates/forms/destiny.php', function(mensaje, estado){
+        document.getElementById('contentCardsBlogs').style = 'display:none';
+        document.getElementById('contentButtonTracking').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
         document.getElementById('servicePostal').innerHTML="EEB";
     })
 
@@ -27,8 +30,8 @@ function nextForm() {
     const selectedOption = select.options[select.selectedIndex];
     const texto = selectedOption.text;
 
-    $.get('./template/forms/weightUnit.php', function(mensaje, estado){
-        document.getElementById('servicesForm').innerHTML=mensaje;
+    $.get('./templates/forms/weightUnit.php', function(mensaje, estado){
+        document.getElementById('contentTemplates').innerHTML=mensaje;
         document.getElementById('stHidden').innerHTML=a;
         document.getElementById('optHidden').innerHTML=b;
         document.getElementById('textOpt').innerHTML=texto;
@@ -62,9 +65,9 @@ function nextForm2() {
             if (peso > 2000) {
                 document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 2000G.";
             } else {
-                $.get('./template/forms/price.php', function(mensaje, estado){
+                $.get('./templates/forms/price.php', function(mensaje, estado){
 
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('optDestino').innerHTML=textOpt;
                     document.getElementById('servicePostal').innerHTML=servicio;
@@ -93,9 +96,9 @@ function nextForm2() {
             if (unidad * 1000 == 2) {
                 document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 2Kg.";
             } else {
-                $.get('./template/forms/price.php', function(mensaje, estado){
+                $.get('./templates/forms/price.php', function(mensaje, estado){
 
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('optDestino').innerHTML=textOpt;
                     document.getElementById('servicePostal').innerHTML=servicio;
@@ -123,9 +126,9 @@ function nextForm2() {
             if (unidad * 453,592 == 4,409245) {
                 document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 4,409Lb.";
             } else {
-                $.get('./template/forms/price.php', function(mensaje, estado){
+                $.get('./templates/forms/price.php', function(mensaje, estado){
 
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('optDestino').innerHTML=textOpt;
                     document.getElementById('servicePostal').innerHTML=servicio;
@@ -156,9 +159,9 @@ function nextForm2() {
             if (peso > 30000) {
                 document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
             } else {
-                $.get('./template/forms/price.php', function(mensaje, estado){
+                $.get('./templates/forms/price.php', function(mensaje, estado){
 
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('optDestino').innerHTML=textOpt;
                     document.getElementById('servicePostal').innerHTML=servicio;
@@ -188,9 +191,9 @@ function nextForm2() {
             if (unidad * 1000 == 30) {
                 document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
             } else {
-                $.get('./template/forms/price.php', function(mensaje, estado){
+                $.get('./templates/forms/price.php', function(mensaje, estado){
 
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('optDestino').innerHTML=textOpt;
                     document.getElementById('servicePostal').innerHTML=servicio;
@@ -220,9 +223,9 @@ function nextForm2() {
             if (unidad * 453,592 == 66,1387) {
                 document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
             } else {
-              $.get('./template/forms/price.php', function(mensaje, estado){
+              $.get('./templates/forms/price.php', function(mensaje, estado){
 
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('optDestino').innerHTML=textOpt;
                     document.getElementById('servicePostal').innerHTML=servicio;
@@ -279,18 +282,20 @@ function nextForm2() {
 
 
 function formPP() {
-    $.get('./template/forms/destiny.php', function(mensaje, estado){
-        document.getElementById('menuNational').style = 'display:none';
-        document.getElementById('servicesForm').innerHTML=mensaje;
+    $.get('./templates/forms/destiny.php', function(mensaje, estado){
+        document.getElementById('contentCardsBlogs').style = 'display:none';
+        document.getElementById('contentButtonTracking').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
         document.getElementById('servicePostal').innerHTML="PP";
     })
 
 }
 
 function formLC() {
-    $.get('./template/forms/destiny.php', function(mensaje, estado){
-        document.getElementById('menuNational').style = 'display:none';
-        document.getElementById('servicesForm').innerHTML=mensaje;
+    $.get('./templates/forms/destiny.php', function(mensaje, estado){
+        document.getElementById('contentCardsBlogs').style = 'display:none';
+        document.getElementById('contentButtonTracking').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
         document.getElementById('servicePostal').innerHTML="LC";
     })
 

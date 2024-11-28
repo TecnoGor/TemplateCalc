@@ -1,5 +1,5 @@
 function servicesInternationals() {
-    $.get('./template/modules/servicesInternationals.php',function(mensaje, estado){
+    $.get('./templates/modules/servicesInternationals.php',function(mensaje, estado){
         document.getElementById('servicesPostals').innerHTML=mensaje;
         document.getElementById('ApiRastreo').style="display: none";
         document.getElementById('servicesForm').style="display:none";
@@ -8,7 +8,7 @@ function servicesInternationals() {
 
 function formEMSC() {
 
-    $.get('./template/formsInternational/destiny.php', function(mensaje, estado){
+    $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
        document.getElementById('servicesForm').style="display:flex";
        document.getElementById('servicesForm').innerHTML=mensaje;
        document.getElementById('servicePostal').innerHTML="EMSC";
@@ -19,7 +19,7 @@ function formEMSC() {
 
 function formPPI() {
 
-    $.get('./template/formsInternational/destiny.php', function(mensaje, estado){
+    $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
        document.getElementById('servicesForm').style="display:flex";
        document.getElementById('servicesForm').innerHTML=mensaje;
        document.getElementById('servicePostal').innerHTML="PPI";
@@ -30,7 +30,7 @@ function formPPI() {
 
 function formCP() {
 
-    $.get('./template/formsInternational/destiny.php', function(mensaje, estado){
+    $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
        document.getElementById('servicesForm').style="display:flex";
        document.getElementById('servicesForm').innerHTML=mensaje;
        document.getElementById('servicePostal').innerHTML="CP";
@@ -41,7 +41,7 @@ function formCP() {
 
 function formMI() {
 
-    $.get('./template/formsInternational/destiny.php', function(mensaje, estado){
+    $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
        document.getElementById('servicesForm').style="display:flex";
        document.getElementById('servicesForm').innerHTML=mensaje;
        document.getElementById('servicePostal').innerHTML="MI";
@@ -52,7 +52,7 @@ function formMI() {
 
 function formLCI() {
 
-    $.get('./template/formsInternational/destiny.php', function(mensaje, estado){
+    $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
        document.getElementById('servicesForm').style="display:flex";
        document.getElementById('servicesForm').innerHTML=mensaje;
        document.getElementById('servicePostal').innerHTML="LCI";
@@ -62,7 +62,7 @@ function formLCI() {
 }
 
 function nextFormInternational(){
-    $.get('./template/formsInternational/weight.php', function(mensaje, estado){
+    $.get('./templates/formsInternational/weight.php', function(mensaje, estado){
         var servicePostal = document.getElementById('servicePostal');
         var a = servicePostal.textContent;
         var continente = document.getElementById('pais');
@@ -92,7 +92,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios EMS tienen un limite de 30000G.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -120,7 +120,7 @@ function showPrice(){
                 if (unidad * 1000 == 2) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 2Kg.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -147,7 +147,7 @@ function showPrice(){
                 if (unidad * 453,592 == 4,409245) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 4,409Lb.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -177,7 +177,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -206,7 +206,7 @@ function showPrice(){
                 if (unidad * 1000 == 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -235,7 +235,7 @@ function showPrice(){
                 if (unidad * 453,592 == 66,1387) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
                 } else {
-                  $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                  $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                     document.getElementById('servicesForm').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
@@ -265,7 +265,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -293,7 +293,7 @@ function showPrice(){
                 if (unidad * 1000 == 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -322,7 +322,7 @@ function showPrice(){
                 if (unidad * 453,592 == 66,1387) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
                 } else {
-                  $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                  $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                     document.getElementById('servicesForm').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
@@ -353,7 +353,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -382,7 +382,7 @@ function showPrice(){
                 if (unidad * 1000 == 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
@@ -411,7 +411,7 @@ function showPrice(){
                 if (unidad * 453,592 == 66,1387) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
                 } else {
-                  $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                  $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                     document.getElementById('servicesForm').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
@@ -442,7 +442,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -471,7 +471,7 @@ function showPrice(){
                 if (unidad * 1000 == 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
                 } else {
-                    $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                         document.getElementById('servicesForm').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
@@ -500,7 +500,7 @@ function showPrice(){
                 if (unidad * 453,592 == 66,1387) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
                 } else {
-                  $.get('./template/formsInternational/price.php', function(mensaje, estado){
+                  $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
                     document.getElementById('servicesForm').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
