@@ -15,5 +15,5 @@
 	<body>
 <?php 
 	include('nav.php');
-	require_once('modals/modalEvents.php');
+	//require_once('modals/modalEvents.php');{}
 ?>

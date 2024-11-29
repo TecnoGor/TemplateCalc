@@ -10,8 +10,6 @@ function servicesNationals() {
 function formEEB() {
 
      $.get('./templates/forms/destiny.php', function(mensaje, estado){
-        document.getElementById('contentCardsBlogs').style = 'display:none';
-        document.getElementById('contentButtonTracking').style = 'display:none';
         document.getElementById('contentTemplates').innerHTML=mensaje;
         document.getElementById('servicePostal').innerHTML="EEB";
     })
@@ -30,15 +28,26 @@ function nextForm() {
     const selectedOption = select.options[select.selectedIndex];
     const texto = selectedOption.text;
 
-    $.get('./templates/forms/weightUnit.php', function(mensaje, estado){
-        document.getElementById('contentTemplates').innerHTML=mensaje;
-        document.getElementById('stHidden').innerHTML=a;
-        document.getElementById('optHidden').innerHTML=b;
-        document.getElementById('textOpt').innerHTML=texto;
-        document.getElementById('stOrigenHidden').innerHTML=d;
-        document.getElementById('optOrigenHidden').innerHTML=e;
-        document.getElementById('servicePostalHidden').innerHTML=c;
-    })
+    if (a == "" || a == null || b == "" || b == null || c == "" || c == null || d == "" || d == null || e == "" || e == null) {
+        swal({
+            title: 'Alerta!',
+            text: "Debe ingresar todos los campos.",
+            type: 'warning',
+            showCancelButton: false,
+            confirmButtonText: 'OK',
+            closeOnConfirm: false
+        });
+    }else {
+        $.get('./templates/forms/weightUnit.php', function(mensaje, estado){
+            document.getElementById('contentTemplates').innerHTML=mensaje;
+            document.getElementById('stHidden').innerHTML=a;
+            document.getElementById('optHidden').innerHTML=b;
+            document.getElementById('textOpt').innerHTML=texto;
+            document.getElementById('stOrigenHidden').innerHTML=d;
+            document.getElementById('optOrigenHidden').innerHTML=e;
+            document.getElementById('servicePostalHidden').innerHTML=c;
+        })
+    }
 
 }
 

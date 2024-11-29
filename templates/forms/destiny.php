@@ -1,13 +1,13 @@
 
-<form method="get" action="" class="container bg-white row position-absolute top-50 start-50 translate-middle g-3 p-3 border border-primary-subtle rounded">
-        <div class="container">
-            <h3>Origen</h3>
+<form method="get" action="" class="container w-50 bg-black bg-gradient bg-opacity-25 row position-absolute top-50 start-50 translate-middle g-3 p-3 border border-danger-subtle rounded">
+        <div class="container text-center text-light">
+            <h1>Origen</h1>
         </div>
 
         <div class="container col-md-5">
-            <label for="STorigen" class="form-label">Estado:</label>
-            <select id="STorigen" required name="STorigen" onchange="selectEstadoOrigen()" class="form-select">
-                <option disabled selected>Seleccione...</option>
+            <label for="STorigen" class="form-label h3 text-light">Estado:</label>
+            <select id="STorigen" required name="STorigen" style="font-size: 15px" onchange="selectEstadoOrigen()" class="form-select">
+                <option disabled selected value="">Seleccione...</option>
                 <option value="2">Amazonas</option>
                 <option value="3">Azoátegui</option>
                 <option value="4">Apure</option>
@@ -36,21 +36,21 @@
         </div>
 
         <div class="container col-md-5">
-            <label for="OPTorigen" class="form-label">OPT destino:</label>
-            <select id="OPTorigen" required name="OPTorigen" class="form-select">
+            <label for="OPTorigen" class="form-label h3 text-light">OPT destino:</label>
+            <select id="OPTorigen" required name="OPTorigen" style="font-size: 15px" class="form-select">
                 <option disabled selected>Seleccione...</option>
                 <option>...</option>
             </select>
         </div>
         <hr>
 
-        <div class="container">
-            <h3>Destino</h3>
+        <div class="container text-center text-light">
+            <h1>Destino</h1>
         </div>
 
         <div class="container col-md-5">
-            <label for="ST" class="form-label">Estado:</label>
-            <select id="ST" name="ST" required onchange="selectEstado()" class="form-select">
+            <label for="ST" class="form-label h3 text-light">Estado:</label>
+            <select id="ST" name="ST" required style="font-size: 15px" onchange="selectEstado()" class="form-select">
                 <option disabled selected>Seleccione...</option>
                 <option value="2">Amazonas</option>
                 <option value="3">Azoátegui</option>
@@ -80,8 +80,8 @@
         </div>
 
         <div class="container col-md-5">
-            <label for="OPT" class="form-label">OPT destino:</label>
-            <select id="OPT" required name="OPT" class="form-select">
+            <label for="OPT" class="form-label h3 text-light">OPT destino:</label>
+            <select id="OPT" required name="OPT" style="font-size: 15px" class="form-select">
                 <option disabled selected>Seleccione...</option>
                 <option>...</option>
             </select>
@@ -89,16 +89,8 @@
         <hr>
 
         <div class="container d-grid gap-2 col-3">
-            <button type="submit" class="btn btn-primary btn-lg">Inicio</button>
+            <button type="button" onclick="nextForm()" id="guardar" class="btn btn-danger btn-lg">Siguiente</button>
         </div>
 
     </form>
-
     <input type="hidden" id="servicePostal">
-
-    <div class="container d-grid gap-2 col-3 p-3">
-            <button type="" onclick="nextForm()" id="guardar" class="btn btn-primary btn-lg">Siguiente</button>
-    </div>
-
-   
-        

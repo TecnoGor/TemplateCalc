@@ -5,12 +5,11 @@
 						<p class="title-footer">Información de Contacto</p>
 						<ul>
 							<li>
-								Dirección: 71 Pennington Lane Vernon Rockville, CT
-								06066
+								Dirección: Urbanización San Martín, Av José Ángel Lamas, Edificio Centro Postal de Caracas Municipio Libertador, parroquia San Juan.- Caracas, Venezuela.
+
 							</li>
-							<li>Teléfono: 123-456-7890</li>
-							<li>Fax: 55555300</li>
-							<li>EmaiL: baristas@support.com</li>
+							<li>Teléfono: 0800-IPOSTEL(4767835)</li>
+							<li>EmaiL: reclutamientoyseleccion@ipostel.gob.ve</li>
 						</ul>
 						<div class="social-icons">
 							<span class="facebook">
@@ -34,37 +33,12 @@
 					<div class="information">
 						<p class="title-footer">Información</p>
 						<ul>
-							<li><a href="#">Acerca de Nosotros</a></li>
-							<li><a href="#">Información Delivery</a></li>
-							<li><a href="#">Politicas de Privacidad</a></li>
-							<li><a href="#">Términos y condiciones</a></li>
-							<li><a href="#">Contactános</a></li>
+							<li><a href="https://www.ipostel.gob.ve/" target="_blank">Acerca de Nosotros</a></li>
+							<li><a href="https://www.ipostel.gob.ve/logistico-almacenado/" target="">Servicio Logistico</a></li>
+							<li><a href="https://www.ipostel.gob.ve/legalizacion-y-apostilla/" target="_blank">Legalizacion y Apostilla</a></li>
+							<li><a href="mailto:reclutamientoyseleccion@gmail.com?
+										subject=Asunto%20del%20Correo&body=Este%20es%20el%20mensaje%20predefinido" target="_blank">Contactános</a></li>
 						</ul>
-					</div>
-
-					<div class="my-account">
-						<p class="title-footer">Mi cuenta</p>
-
-						<ul>
-							<li><a href="#">Mi cuenta</a></li>
-							<li><a href="#">Historial de ordenes</a></li>
-							<li><a href="#">Lista de deseos</a></li>
-							<li><a href="#">Boletín</a></li>
-							<li><a href="#">Reembolsos</a></li>
-						</ul>
-					</div>
-
-					<div class="newsletter">
-						<p class="title-footer">Boletín informativo</p>
-
-						<div class="content">
-							<p>
-								Suscríbete a nuestros boletines ahora y mantente al
-								día con nuevas colecciones y ofertas exclusivas.
-							</p>
-							<input type="email" placeholder="Ingresa el correo aquí...">
-							<button>Suscríbete</button>
-						</div>
 					</div>
 				</div>
 
@@ -73,7 +47,7 @@
 						Desarrollado por Robert González &copy; 2024
 					</p>
 
-					<img src="assets/img/payment.png" alt="Pagos">
+					<!-- img src="assets/img/payment.png" alt="Pagos"-->
 				</div>
 			</div>
 		</footer>

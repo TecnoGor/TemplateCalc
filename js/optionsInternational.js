@@ -1,18 +1,16 @@
 function servicesInternationals() {
     $.get('./templates/modules/servicesInternationals.php',function(mensaje, estado){
-        document.getElementById('servicesPostals').innerHTML=mensaje;
-        document.getElementById('ApiRastreo').style="display: none";
-        document.getElementById('servicesForm').style="display:none";
+        document.getElementById('contentCardsBlogs').style = 'display:none';
+        document.getElementById('contentButtonTracking').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
     })
 }
 
 function formEMSC() {
 
     $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
-       document.getElementById('servicesForm').style="display:flex";
-       document.getElementById('servicesForm').innerHTML=mensaje;
-       document.getElementById('servicePostal').innerHTML="EMSC";
-       document.getElementById('menuNational').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
+        document.getElementById('servicePostal').innerHTML="EMSC";
    })
 
 }
@@ -20,10 +18,8 @@ function formEMSC() {
 function formPPI() {
 
     $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
-       document.getElementById('servicesForm').style="display:flex";
-       document.getElementById('servicesForm').innerHTML=mensaje;
-       document.getElementById('servicePostal').innerHTML="PPI";
-       document.getElementById('menuNational').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
+        document.getElementById('servicePostal').innerHTML="PPI";
    })
 
 }
@@ -31,10 +27,8 @@ function formPPI() {
 function formCP() {
 
     $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
-       document.getElementById('servicesForm').style="display:flex";
-       document.getElementById('servicesForm').innerHTML=mensaje;
-       document.getElementById('servicePostal').innerHTML="CP";
-       document.getElementById('menuNational').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
+        document.getElementById('servicePostal').innerHTML="CP";
    })
 
 }
@@ -42,10 +36,8 @@ function formCP() {
 function formMI() {
 
     $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
-       document.getElementById('servicesForm').style="display:flex";
-       document.getElementById('servicesForm').innerHTML=mensaje;
-       document.getElementById('servicePostal').innerHTML="MI";
-       document.getElementById('menuNational').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
+        document.getElementById('servicePostal').innerHTML="MI";
    })
 
 }
@@ -53,27 +45,37 @@ function formMI() {
 function formLCI() {
 
     $.get('./templates/formsInternational/destiny.php', function(mensaje, estado){
-       document.getElementById('servicesForm').style="display:flex";
-       document.getElementById('servicesForm').innerHTML=mensaje;
-       document.getElementById('servicePostal').innerHTML="LCI";
-       document.getElementById('menuNational').style = 'display:none';
+        document.getElementById('contentTemplates').innerHTML=mensaje;
+        document.getElementById('servicePostal').innerHTML="LCI";
    })
 
 }
 
 function nextFormInternational(){
-    $.get('./templates/formsInternational/weight.php', function(mensaje, estado){
-        var servicePostal = document.getElementById('servicePostal');
-        var a = servicePostal.textContent;
-        var continente = document.getElementById('pais');
-        var b = continente.value;
-        var c = continente.options[continente.selectedIndex];
-        var textoPais = c.text;
-        document.getElementById('servicesForm').innerHTML=mensaje;
-        document.getElementById('servicePostalHidden').innerHTML=a;
-        document.getElementById('continenteHidden').innerHTML=b;
-        document.getElementById('paisHidden').innerHTML=textoPais;
-    })
+    var servicePostal = document.getElementById('servicePostal');
+    var a = servicePostal.textContent;
+    var continente = document.getElementById('pais');
+    var b = continente.value;
+    var c = continente.options[continente.selectedIndex];
+    var textoPais = c.text;
+
+    if (a == "" || a == null || b == "" || b == null || textoPais == "" || textoPais == null) {
+        swal({
+            title: 'Alerta!',
+            text: "Debe ingresar todos los campos.",
+            type: 'warning',
+            showCancelButton: false,
+            confirmButtonText: 'OK',
+            closeOnConfirm: false
+        });
+    } else {
+        $.get('./templates/formsInternational/weight.php', function(mensaje, estado){
+            document.getElementById('contentTemplates').innerHTML=mensaje;
+            document.getElementById('servicePostalHidden').innerHTML=a;
+            document.getElementById('continenteHidden').innerHTML=b;
+            document.getElementById('paisHidden').innerHTML=textoPais;
+        })
+    }
 }
 
 function showPrice(){
@@ -94,7 +96,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -122,7 +124,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -149,7 +151,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -179,7 +181,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -208,7 +210,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -237,7 +239,7 @@ function showPrice(){
                 } else {
                   $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('servicePostal').innerHTML=servicio;
                     document.getElementById('pais').innerHTML=a;
@@ -267,7 +269,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -295,7 +297,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -324,7 +326,7 @@ function showPrice(){
                 } else {
                   $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('servicePostal').innerHTML=servicio;
                     document.getElementById('pais').innerHTML=a;
@@ -355,7 +357,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -384,7 +386,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('servicePostal').innerHTML=servicio;
                     document.getElementById('pais').innerHTML=a;
@@ -413,7 +415,7 @@ function showPrice(){
                 } else {
                   $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('servicePostal').innerHTML=servicio;
                     document.getElementById('pais').innerHTML=a;
@@ -444,7 +446,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -473,7 +475,7 @@ function showPrice(){
                 } else {
                     $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                        document.getElementById('servicesForm').innerHTML=mensaje;
+                        document.getElementById('contentTemplates').innerHTML=mensaje;
                         document.getElementById('weight').innerHTML=peso+unidad;
                         document.getElementById('servicePostal').innerHTML=servicio;
                         document.getElementById('pais').innerHTML=a;
@@ -502,7 +504,7 @@ function showPrice(){
                 } else {
                   $.get('./templates/formsInternational/price.php', function(mensaje, estado){
     
-                    document.getElementById('servicesForm').innerHTML=mensaje;
+                    document.getElementById('contentTemplates').innerHTML=mensaje;
                     document.getElementById('weight').innerHTML=peso+unidad;
                     document.getElementById('servicePostal').innerHTML=servicio;
                     document.getElementById('pais').innerHTML=a;
