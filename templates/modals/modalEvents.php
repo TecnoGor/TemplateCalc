@@ -38,7 +38,7 @@
                               JOIN 
                                 N_OWN_OFFICES AS oficinas ON LME.EVENT_OFFICE_CD = oficinas.OWN_OFFICE_CD
                               WHERE 
-                                  LME.MAILITM_FID = 'UD727506523MY'
+                                  LME.MAILITM_FID = '$searchInput'
 
                               UNION ALL
 
@@ -56,7 +56,7 @@
                               JOIN
                                 C_OFFICES AS locationId ON ediEvents.LOCATION_ID = locationId.OFFICE_FCD 
                               WHERE 
-                                  L_MAILITM_EVENTS.MAILITM_FID = 'UD727506523MY';";
+                                  L_MAILITM_EVENTS.MAILITM_FID = '$searchInput';";
                 $stmtEvents = sqlsrv_query($conn, $sqlEvents);
                 // $stmtEvents->execute();
                 

@@ -60,6 +60,7 @@ function searchEnv() {
           document.getElementById('paisOrig').textContent = data.data.ORIG_COUNTRY_CD;
           document.getElementById('paisDest').textContent = data.data.DEST_COUNTRY_CD;
           document.getElementById('weightEnv').textContent = data.data.MAILITM_WEIGHT + " G";
+
         } else {
           swal({
             title: 'Error!',
@@ -72,6 +73,27 @@ function searchEnv() {
         }
       }
     })
+
+    $.ajax({
+      url: "./templates/modals/modalEvents.php",
+      method: "POST",
+      data: {
+        search: a
+      },
+      success: function(data) {
+          document.getElementById('modalContainerJs').innerHTML=data;
+          $(document).ready( function () {
+            $('#tableEventsQuery').DataTable({
+                "language": {
+                    "url": "./js/langDT.json"
+                },
+                pageLength: 5,
+                lengthMenu: [5, 10, 25, 50, 100]
+            });
+            
+        } );
+      }
+    });
   }
   
 }
@@ -101,15 +123,6 @@ function modalEventQuery(){
       closeOnConfirm: false
     });
   } else {
-    $.ajax({
-      url: "<?php echo $_SERVER['PHP_SERVER'];?>",
-      method: "POST",
-      data: {
-        search: a
-      },
-      success: function(data) {
-        $('#modalEventos').modal('show');
-      }
-    });
+    $('#modalEventos').modal('show');  
   }
 }
