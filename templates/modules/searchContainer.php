@@ -2,7 +2,7 @@
         
     <div class="card w-50 position-absolute top-0 start-50 translate-middle rounded-5 bg-black bg-gradient bg-opacity-25">
         <div class="card-header text-center text-light">
-            <h2>INGRESA EL CODIGO DE ENVIO</h2>            
+            <h2>INGRESA EL CÓDIGO DE ENVIO</h2>            
         </div>
 
         <div class="card-body">
@@ -22,7 +22,7 @@
             <hr>
 
             <blockquote class="blockquote mb-0 text-light">
-            <h3>Codigo de envio: <b id="codEnv"></b> </h3>
+            <h3>Código de envio: <b id="codEnv"></b> </h3>
             <h3>Origen:  <b id="paisOrig"></b></h3>
             <h3>Destino:  <b id="paisDest"></b></h3>
             <h3>Peso: <b id="weightEnv"></b></h3>

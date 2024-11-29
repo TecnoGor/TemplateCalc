@@ -24,7 +24,7 @@
 
             <tbody>
               <?php
-                include('includes/conn.php');
+                include('../../includes/conn.php');
 
                 $searchInput = $_POST['search'];
 
@@ -56,7 +56,7 @@
                               JOIN
                                 C_OFFICES AS locationId ON ediEvents.LOCATION_ID = locationId.OFFICE_FCD 
                               WHERE 
-                                  L_MAILITM_EVENTS.MAILITM_FID = '$searchInput';";
+                                  L_MAILITM_EVENTS.MAILITM_FID = 'UD727506523MY';";
                 $stmtEvents = sqlsrv_query($conn, $sqlEvents);
                 // $stmtEvents->execute();
                 
