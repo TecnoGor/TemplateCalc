@@ -23,8 +23,8 @@
 
             <blockquote class="blockquote mb-0 text-light">
             <h3>Código de envio: <b id="codEnv"></b> </h3>
-            <h3>Origen:  <b id="paisOrig"></b></h3>
-            <h3>Destino:  <b id="paisDest"></b></h3>
+            <h3>Origen: <span id="svgContainerOrig"></span><b id="paisOrig"></b></h3>
+            <h3>Destino: <span id="svgContainerDest"></span><b id="paisDest"></b></h3>
             <h3>Peso: <b id="weightEnv"></b></h3>
             </blockquote>
         </div>

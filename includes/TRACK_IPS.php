@@ -14,8 +14,10 @@
     
     $tsql = "SELECT MAILITM_FID, 
                     MAILITM_WEIGHT, 
-                    MAIL_CLASS_CD, 
-                    p1.COUNTRY_NM AS ORIG_COUNTRY_CD, 
+                    MAIL_CLASS_CD,
+                    ORIG_COUNTRY_CD AS countryCode,
+                    DEST_COUNTRY_CD AS destCountryCode,
+                    p1.COUNTRY_NM AS ORIG_COUNTRY_CD,
                     p2.COUNTRY_NM AS DEST_COUNTRY_CD  
                     FROM dbo.L_MAILITMS
                     JOIN dbo.C_COUNTRIES as p1 

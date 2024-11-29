@@ -7,10 +7,10 @@
 
         <div class="card-body">
             <blockquote class="blockquote mb-0 text-light">
-            <p class="h3">Monto: <b id="price"></b> </p>
-            <p class="h3">Peso:  <b id="weight"></b></p>
-            <p class="h3">Destino:  <b id="optDestino"></b></p>
-            <p class="h3">Servicio Postal: <b id="servicePostal"></b></p>
+                <p class="h3">Monto: <b id="price"></b> </p>
+                <p class="h3">Peso:  <b id="weight"></b></p>
+                <p class="h3">Destino:  <b id="optDestino"></b></p>
+                <p class="h3">Servicio Postal: <b id="servicePostal"></b></p>
             </blockquote>
         </div>
 

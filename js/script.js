@@ -60,7 +60,45 @@ function searchEnv() {
           document.getElementById('paisOrig').textContent = data.data.ORIG_COUNTRY_CD;
           document.getElementById('paisDest').textContent = data.data.DEST_COUNTRY_CD;
           document.getElementById('weightEnv').textContent = data.data.MAILITM_WEIGHT + " G";
+          let codeOrig = data.data.countryCode;
+          let codeOrigLower = codeOrig.toLowerCase();
+          let codeDest = data.data.destCountryCode;
+          let codeDestLower = codeDest.toLowerCase();
+          fetch('./assets/c_svg/' + codeOrigLower + '.svg')
+            .then(response => response.text())
+            .then(data => {
 
+                const parserOrig = new DOMParser();
+                const svgOrig = parserOrig.parseFromString(data, 'image/svg+xml');
+                const svgOrigElement = svgOrig.querySelector('svg');
+
+                svgOrigElement.setAttribute("width", "50px");
+                svgOrigElement.setAttribute("height", "20px");
+
+                document.getElementById('svgContainerOrig').innerHTML = svgOrigElement.outerHTML;
+            })
+
+            fetch('./assets/c_svg/' + codeDestLower + '.svg')
+            .then(response => response.text())
+            .then(data => {
+
+                const parserDest = new DOMParser();
+                const svgDest = parserDest.parseFromString(data, 'image/svg+xml');
+                const svgDestElement = svgDest.querySelector('svg');
+
+                svgDestElement.setAttribute("width", "50px");
+                svgDestElement.setAttribute("height", "20px");
+
+                document.getElementById('svgContainerDest').innerHTML = svgDestElement.outerHTML;
+            })
+          // const svgNameOrig = "./assets/c_svg/" + "ve" + ".svg";
+
+          // const svgOrig = document.createElementNS(svgNameOrig, "svg");
+          // svgOrig.setAttribute("width", "80px");
+          // svgOrig.setAttribute("height", "50px");
+
+          // document.getElementById('svgContainerOrig').appendChild(svgOrig);
+            // EE002978569VE
         } else {
           swal({
             title: 'Error!',
@@ -90,6 +128,8 @@ function searchEnv() {
                 pageLength: 5,
                 lengthMenu: [5, 10, 25, 50, 100]
             })
+
+            $('#tableEventsQuery').css('font-size', '15px');
           });
       }
     });

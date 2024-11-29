@@ -94,14 +94,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios EMS tienen un limite de 30000G.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
+                    
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -112,24 +105,25 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
+                            
                         }
     
                     })
                 }
     
             } if (unidad == "KG") {
-                if (unidad * 1000 == 2) {
+                if (peso >= 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 2Kg.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -140,7 +134,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })
@@ -149,14 +151,6 @@ function showPrice(){
                 if (unidad * 453,592 == 4,409245) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 4,409Lb.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -167,7 +161,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })
@@ -179,14 +181,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
+                    
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -197,7 +192,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })
@@ -208,14 +211,6 @@ function showPrice(){
                 if (unidad * 1000 == 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -226,7 +221,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })
@@ -237,14 +240,7 @@ function showPrice(){
                 if (unidad * 453,592 == 66,1387) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
                 } else {
-                  $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    document.getElementById('pais').innerHTML=a;
-                    
-                })
+                  
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -255,7 +251,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
                     })  
                 }
@@ -267,14 +271,6 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -285,7 +281,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
                     })
                 }
@@ -295,14 +299,7 @@ function showPrice(){
                 if (unidad * 1000 == 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
+                    
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -313,7 +310,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })
@@ -324,14 +329,7 @@ function showPrice(){
                 if (unidad * 453,592 == 66,1387) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
                 } else {
-                  $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    document.getElementById('pais').innerHTML=a;
-                    
-                })
+                 
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -342,7 +340,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })  
@@ -355,14 +361,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
+                    
                         $.ajax({
                             url: './includes/calcInt.php',
                             method: 'POST',
@@ -373,7 +372,15 @@ function showPrice(){
                                 pais:b
                             },
                             success: function(data) {
-                                $('#price').html(data);
+                                $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                    document.getElementById('contentTemplates').innerHTML=mensaje;
+                                    document.getElementById('price').innerHTML=data;
+                                    document.getElementById('weight').innerHTML=peso+unidad;
+                                    document.getElementById('servicePostal').innerHTML=servicio;
+                                    document.getElementById('pais').innerHTML=a;
+                                    
+                                })
                             }
         
                         })
@@ -384,14 +391,7 @@ function showPrice(){
                 if (unidad * 1000 == 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    document.getElementById('pais').innerHTML=a;
                     
-                })
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -402,7 +402,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })
@@ -413,14 +421,7 @@ function showPrice(){
                 if (unidad * 453,592 == 66,1387) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
                 } else {
-                  $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    document.getElementById('pais').innerHTML=a;
-                    
-                })
+                  
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -431,7 +432,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })  
@@ -444,14 +453,7 @@ function showPrice(){
                 if (peso > 30000) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
+                    
                         $.ajax({
                             url: './includes/calcInt.php',
                             method: 'POST',
@@ -462,7 +464,15 @@ function showPrice(){
                                 pais:b
                             },
                             success: function(data) {
-                                $('#price').html(data);
+                                $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                    document.getElementById('contentTemplates').innerHTML=mensaje;
+                                    document.getElementById('price').innerHTML=data;
+                                    document.getElementById('weight').innerHTML=peso+unidad;
+                                    document.getElementById('servicePostal').innerHTML=servicio;
+                                    document.getElementById('pais').innerHTML=a;
+                                    
+                                })
                             }
         
                         })
@@ -473,14 +483,7 @@ function showPrice(){
                 if (unidad * 1000 == 30) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
                 } else {
-                    $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                        document.getElementById('contentTemplates').innerHTML=mensaje;
-                        document.getElementById('weight').innerHTML=peso+unidad;
-                        document.getElementById('servicePostal').innerHTML=servicio;
-                        document.getElementById('pais').innerHTML=a;
-                        
-                    })
+                    
                         $.ajax({
                             url: './includes/calcInt.php',
                             method: 'POST',
@@ -491,7 +494,15 @@ function showPrice(){
                                 pais:b
                             },
                             success: function(data) {
-                                $('#price').html(data);
+                                $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                    document.getElementById('contentTemplates').innerHTML=mensaje;
+                                    document.getElementById('price').innerHTML=data;
+                                    document.getElementById('weight').innerHTML=peso+unidad;
+                                    document.getElementById('servicePostal').innerHTML=servicio;
+                                    document.getElementById('pais').innerHTML=a;
+                                    
+                                })
                             }
         
                         })
@@ -502,14 +513,7 @@ function showPrice(){
                 if (unidad * 453,592 == 66,1387) {
                     document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
                 } else {
-                  $.get('./templates/formsInternational/price.php', function(mensaje, estado){
-    
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    document.getElementById('pais').innerHTML=a;
-                    
-                })
+                  
                     $.ajax({
                         url: './includes/calcInt.php',
                         method: 'POST',
@@ -520,7 +524,15 @@ function showPrice(){
                             pais:b
                         },
                         success: function(data) {
-                            $('#price').html(data);
+                            $.get('./templates/formsInternational/price.php', function(mensaje, estado){
+    
+                                document.getElementById('contentTemplates').innerHTML=mensaje;
+                                document.getElementById('price').innerHTML=data;
+                                document.getElementById('weight').innerHTML=peso+unidad;
+                                document.getElementById('servicePostal').innerHTML=servicio;
+                                document.getElementById('pais').innerHTML=a;
+                                
+                            })
                         }
     
                     })  

@@ -6,8 +6,8 @@
 
       <div class="modal-header">
         
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 id="exampleModalLabel">Eventos</h1>
+        <button type="button" class="btn-close" style="font-size: 20px" data-bs-dismiss="modal" aria-label="Close"></button>
         
       </div>
 
@@ -16,10 +16,10 @@
           <table id="tableEventsQuery" class="table table-hover">
 
             <thead>
-              <th>Nº</th>
-              <th>Fecha</th>
-              <th>Descripción</th>
-              <th>Oficina</th>
+              <th scope="col">#</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Oficina</th>
             </thead>
 
             <tbody>
@@ -54,7 +54,9 @@
                               JOIN
                                 C_OFFICES AS locationId ON ediEvents.LOCATION_ID = locationId.OFFICE_FCD 
                               WHERE 
-                                  N_EDI_MAILITMS.MAILITM_FID = '$searchInput';";
+                                  N_EDI_MAILITMS.MAILITM_FID = '$searchInput'
+                              ORDER BY
+	                                fecha ASC;";
                 $stmtEvents = sqlsrv_query($conn, $sqlEvents);
                 // $stmtEvents->execute();
                 
@@ -64,7 +66,7 @@
                   
               ?>
               <tr>
-                <td><?php echo $i++; ?></td>
+                <td scope="row"><?php echo $i++; ?></td>
                 <td><?php echo $resultEvents['fecha']->format('d-m-Y H:i'); ?></td>
                 <td><?php echo $resultEvents['eventos']; ?></td>
                 <td><?php echo $resultEvents['oficina']; ?></td>
@@ -81,9 +83,7 @@
 
       <div class="modal-footer">
 
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-      <button type="button" class="btn btn-primary">Save changes</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><h3>Cerrar</h3></button>
 
       </div>
 

@@ -1,16 +1,16 @@
 <div class="container w-50 bg-transparent position-absolute top-50 start-50 translate-middle row g-3 p-3 border border-danger-subtle rounded">
         
     <div class="card bg-black bg-gradient bg-opacity-25 border rounded">
-        <div class="card-header">
-            Tarifa
+        <div class="card-header text-center text-light">
+            <h1>Tarifa</h1>
         </div>
 
         <div class="card-body">
-            <blockquote class="blockquote mb-0">
-            <p>Monto: <b id="price"></b> </p>
-            <p>Peso:  <b id="weight"></b></p>
-            <p>Destino:  <b id="pais"></b></p>
-            <p>Servicio Postal: <b id="servicePostal"></b></p>
+            <blockquote class="blockquote mb-0 text-light">
+            <p class="h3">Monto: <b id="price"></b> </p>
+            <p class="h3">Peso:  <b id="weight"></b></p>
+            <p class="h3">Destino:  <b id="pais"></b></p>
+            <p class="h3">Servicio Postal: <b id="servicePostal"></b></p>
             </blockquote>
         </div>
 
