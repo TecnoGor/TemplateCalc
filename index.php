@@ -15,7 +15,7 @@
 
 					<div class="container-blogs">
 
-						<div class="card-blog">
+						<div class="card-blog" onclick="servicesNationals()">
 							<div class="container-img text-center">
 								<div class="blog1">
 									<h1 class="position-absolute top-50 start-50 translate-middle text-light">Servicios Nacionales</h1>
@@ -23,7 +23,7 @@
 							</div>
 						</div>
 
-						<div class="card-blog">
+						<div class="card-blog" onclick="servicesInternationals()">
 							<div class="container-img text-center">
 								<div class="blog2">
 									<h1 class="position-absolute top-50 start-50 translate-middle text-light">Servicios Internacionales</h1>
@@ -32,7 +32,7 @@
 							
 						</div>
 
-						<div class="card-blog">
+						<div class="card-blog" onclick="modalDevelop()">
 							<div class="container-img">
 								<div class="blog3">
 									<h1 class="position-absolute top-50 start-50 translate-middle text-light">Fletes</h1>

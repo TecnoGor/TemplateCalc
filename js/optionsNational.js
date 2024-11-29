@@ -28,7 +28,7 @@ function nextForm() {
     const selectedOption = select.options[select.selectedIndex];
     const texto = selectedOption.text;
 
-    if (a == "" || a == null || b == "" || b == null || c == "" || c == null || d == "" || d == null || e == "" || e == null) {
+    if (a == "" || a == null || b == "" || b == null || b == "..." || c == "" || c == null || d == "" || d == null || e == "" || e == null || e == "...") {
         swal({
             title: 'Alerta!',
             text: "Debe ingresar todos los campos.",

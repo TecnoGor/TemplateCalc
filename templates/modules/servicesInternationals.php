@@ -1,4 +1,4 @@
-<div id="menuNational" class="container w-50 bg-black bg-gradient bg-opacity-25 position-absolute top-50 start-50 translate-middle row g-3 p-3 border border-primary-subtle rounded">
+<div id="menuNational" class="container w-50 bg-black bg-gradient bg-opacity-25 position-absolute top-50 start-50 translate-middle row g-3 p-3 border border-danger-subtle rounded">
             
     <div class="container col-12 text-center text-light">
         <h1>Servicios Postales Internacionales</h1>

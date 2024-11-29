@@ -76,6 +76,40 @@ function searchEnv() {
   
 }
 
+function modalDevelop(){
+  swal({
+    title: 'En desarrollo! <i class="bi bi-gear"></i>',
+    text: "Disculpe los inconvenientes, pero este módulo aún se encuentra en desarrollo. Esperamos que para su próxima visita esté en funcionamiento. 😉",
+    type: 'warning',
+    showCancelButton: false,
+    confirmButtonText: 'OK',
+    closeOnConfirm: false
+  });
+}
+
 function modalEventQuery(){
-  $('#modalEventos').modal('show');
+
+  var a = document.getElementById('searchInput').value;
+
+  if (a == "" || a == null) {
+    swal({
+      title: 'Error!',
+      text: "Debe ingresar el codigo de envio.",
+      type: 'error',
+      showCancelButton: false,
+      confirmButtonText: 'OK',
+      closeOnConfirm: false
+    });
+  } else {
+    $.ajax({
+      url: "<?php echo $_SERVER['PHP_SERVER'];?>",
+      method: "POST",
+      data: {
+        search: a
+      },
+      success: function(data) {
+        $('#modalEventos').modal('show');
+      }
+    });
+  }
 }

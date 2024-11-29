@@ -6,10 +6,9 @@
 
       <div class="modal-header">
         
-
         <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <?php echo $codEnv = '<input type="hidden" id="codEnvHidden" name="codEnvHidden">';?>
+        
       </div>
 
         <div class="modal-body">
@@ -26,6 +25,8 @@
             <tbody>
               <?php
                 include('includes/conn.php');
+
+                $searchInput = $_POST['search'];
 
                 $sqlEvents = "SELECT LME.EVENT_GMT_DT AS fecha, 
                                   eventNationals.EVENT_TYPE_NM AS eventos,

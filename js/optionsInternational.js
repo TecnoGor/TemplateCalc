@@ -59,7 +59,7 @@ function nextFormInternational(){
     var c = continente.options[continente.selectedIndex];
     var textoPais = c.text;
 
-    if (a == "" || a == null || b == "" || b == null || textoPais == "" || textoPais == null) {
+    if (a == "" || a == null || b == "" || b == null || b == "..." || textoPais == "" || textoPais == null) {
         swal({
             title: 'Alerta!',
             text: "Debe ingresar todos los campos.",
