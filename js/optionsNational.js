@@ -64,24 +64,21 @@ function nextForm2() {
     let STorigen = e.textContent;
     let g = document.getElementById('optOrigenHidden');
     let OPTorigen = g.textContent;
-
-
     let i = document.getElementById('servicePostalHidden');
     let servicio = i.textContent;
 
     if(servicio == "LC"){
         if(unidad == "G"){
             if (peso > 2000) {
-                document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 2000G.";
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Cartas e Impresos es de 2.000G. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
             } else {
-                $.get('./templates/forms/price.php', function(mensaje, estado){
-
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('optDestino').innerHTML=textOpt;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    
-                })
                 $.ajax({
                     url: './includes/calc.php',
                     method: 'POST',
@@ -95,24 +92,33 @@ function nextForm2() {
                         OPT:OPT
                     },
                     success: function(data) {
-                        $('#price').html(data);
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+                            
+                            console.log(data);
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        });
                     }
 
                 })
             }
 
         } if (unidad == "KG") {
-            if (unidad * 1000 == 2) {
-                document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 2Kg.";
+            if (peso > 2) {
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Cartas e Impresos es de 2kg. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
             } else {
-                $.get('./templates/forms/price.php', function(mensaje, estado){
-
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('optDestino').innerHTML=textOpt;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    
-                })
+                
                 $.ajax({
                     url: './includes/calc.php',
                     method: 'POST',
@@ -126,23 +132,32 @@ function nextForm2() {
                         OPT:OPT
                     },
                     success: function(data) {
-                        $('#price').html(data);
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        })
+                        
                     }
 
                 })
             }
         } if (unidad == "LB") {
-            if (unidad * 453,592 == 4,409245) {
+            if (peso >= 4,409245) {
                 document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 4,409Lb.";
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Cartas e Impresos es de 4,409Lb. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
             } else {
-                $.get('./templates/forms/price.php', function(mensaje, estado){
-
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('optDestino').innerHTML=textOpt;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    
-                })
                 $.ajax({
                     url: './includes/calc.php',
                     method: 'POST',
@@ -156,7 +171,15 @@ function nextForm2() {
                         OPT:OPT
                     },
                     success: function(data) {
-                        $('#price').html(data);
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        })
                     }
 
                 })
@@ -166,16 +189,15 @@ function nextForm2() {
         if(unidad == "G"){
 
             if (peso > 30000) {
-                document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30.000G.";
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Envios Expresos Bolivarianos es de 30.000G. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
             } else {
-                $.get('./templates/forms/price.php', function(mensaje, estado){
-
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('optDestino').innerHTML=textOpt;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    
-                })
                 $.ajax({
                     url: './includes/calc.php',
                     method: 'POST',
@@ -189,7 +211,15 @@ function nextForm2() {
                         OPT:OPT
                     },
                     success: function(data) {
-                        $('#price').html(data);
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        })
                     }
 
                 })
@@ -197,17 +227,18 @@ function nextForm2() {
 
         } if (unidad == "KG") {
 
-            if (unidad * 1000 == 30) {
-                document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
+            if (peso > 30) {
+                // document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Envios Expresos Bolivarianos es de 30kg. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
             } else {
-                $.get('./templates/forms/price.php', function(mensaje, estado){
-
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('optDestino').innerHTML=textOpt;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    
-                })
+                
                 $.ajax({
                     url: './includes/calc.php',
                     method: 'POST',
@@ -221,7 +252,15 @@ function nextForm2() {
                         OPT:OPT
                     },
                     success: function(data) {
-                        $('#price').html(data);
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        })
                     }
 
                 })
@@ -229,17 +268,17 @@ function nextForm2() {
 
         } if (unidad == "LB") {
 
-            if (unidad * 453,592 == 66,1387) {
-                document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
+            if (peso > 66,1387) {
+                // document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Envios Expresos Bolivarianos es de 66,1387Lb. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
             } else {
-              $.get('./templates/forms/price.php', function(mensaje, estado){
-
-                    document.getElementById('contentTemplates').innerHTML=mensaje;
-                    document.getElementById('weight').innerHTML=peso+unidad;
-                    document.getElementById('optDestino').innerHTML=textOpt;
-                    document.getElementById('servicePostal').innerHTML=servicio;
-                    
-                })
                 $.ajax({
                     url: './includes/calc.php',
                     method: 'POST',
@@ -253,7 +292,136 @@ function nextForm2() {
                         OPT:OPT
                     },
                     success: function(data) {
-                        $('#price').html(data);
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        })
+                    }
+
+                })  
+            }
+
+        }
+    } if (servicio == "PP"){
+        if(unidad == "G"){
+
+            if (peso > 30000) {
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Pequeños Paquetes es de 30.000G. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
+            } else {
+                $.ajax({
+                    url: './includes/calc.php',
+                    method: 'POST',
+                    data: {
+                        servicio:servicio,
+                        peso:peso,
+                        unidad:unidad,
+                        STorigen:STorigen,
+                        OPTorigen:OPTorigen,
+                        ST:ST,
+                        OPT:OPT
+                    },
+                    success: function(data) {
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        })
+                    }
+
+                })
+            }
+
+        } if (unidad == "KG") {
+
+            if (peso > 30) {
+                // document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 30Kg.";
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Envios Expresos Bolivarianos es de 30kg. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
+            } else {
+                $.ajax({
+                    url: './includes/calc.php',
+                    method: 'POST',
+                    data: {
+                        servicio:servicio,
+                        peso:peso,
+                        unidad:unidad,
+                        STorigen:STorigen,
+                        OPTorigen:OPTorigen,
+                        ST:ST,
+                        OPT:OPT
+                    },
+                    success: function(data) {
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        })
+                    }
+
+                })
+            }
+
+        } if (unidad == "LB") {
+
+            if (peso > 66,1387) {
+                // document.getElementById('textLimite').innerHTML="Los servicios LC tienen un limite de 66,1387Lb.";
+                swal({
+                    title: 'Cantidad excedida!',
+                    text: "El peso maximo para un Envío de Envios Expresos Bolivarianos es de 66,1387Lb. Verifique el peso 🔎 y vuelva a intentarlo.",
+                    type: 'warning',
+                    showCancelButton: false,
+                    confirmButtonText: 'OK',
+                    closeOnConfirm: false
+                });
+            } else {
+                $.ajax({
+                    url: './includes/calc.php',
+                    method: 'POST',
+                    data: {
+                        servicio:servicio,
+                        peso:peso,
+                        unidad:unidad,
+                        STorigen:STorigen,
+                        OPTorigen:OPTorigen,
+                        ST:ST,
+                        OPT:OPT
+                    },
+                    success: function(data) {
+                        $.get('./templates/forms/price.php', function(mensaje, estado){
+
+                            document.getElementById('contentTemplates').innerHTML=mensaje;
+                            document.getElementById('price').innerHTML=data;
+                            document.getElementById('weight').innerHTML=peso+unidad;
+                            document.getElementById('optDestino').innerHTML=textOpt;
+                            document.getElementById('servicePostal').innerHTML=servicio;
+                            
+                        })
                     }
 
                 })  

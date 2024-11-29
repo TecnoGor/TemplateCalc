@@ -46,7 +46,7 @@
 
 				<div class="content-banner" id="contentButtonTracking">
 					<p>Tracking de Envios</p>
-					<h2>Rastrea tu paquete con nosotros 🥵😈</h2>
+					<h2>Rastrea tu paquete con nosotros 🚍</h2>
 					<a onclick="containSearch()" style="color: #ffffff; cursor: pointer;"><h4><i class="bi bi-search"></i> Rastrear</h4></a>
 				</div>
 

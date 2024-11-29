@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.scss">
 		<link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.css">
 		<link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
-		<link rel="stylesheet" href="../node_modules/datatables.net-dt/css/dataTables.dataTables.css">
+		<link rel="stylesheet" href="node_modules/datatables.net-dt/css/dataTables.dataTables.css">
 	</head>
 	<body>
 <?php 

@@ -80,19 +80,50 @@
     }
 
     if ($_POST['servicio'] == "PP") {
-        if($pesoG >=0 && $pesoG <= 500){
-            echo "Bs. 177,63";
-        }elseif ($pesoG >=501 && $pesoG <= 2000) {
-            echo "Bs. 260,94";
-        }elseif ($pesoG >=2001 && $pesoG <= 5000) {
-            echo "Bs. 498,67";
-        }elseif ($pesoG >=5001 && $pesoG <= 10000) {
-            echo "Bs. 633,12";
-        }elseif ($pesoG >=10001 && $pesoG <= 20000) {
-            echo "Bs. 1.023,97";
-        }elseif ($pesoG >=20001 && $pesoG <= 30000) {
-            echo "Bs. 1.453,20";
+        if ($estadoOrigen == $estadoDestino && $municipioOrigen != $municipioDestino) {
+            if($pesoG >=0 && $pesoG <= 500){
+                echo "Bs. 150,51";
+            }elseif ($pesoG >=501 && $pesoG <= 2000) {
+                echo "Bs. 246,66";
+            }elseif ($pesoG >=2001 && $pesoG <= 5000) {
+                echo "Bs. 373,59";
+            }elseif ($pesoG >=5001 && $pesoG <= 10000) {
+                echo "Bs. 554,83";
+            }elseif ($pesoG >=10001 && $pesoG <= 20000) {
+                echo "Bs. 729,92";
+            }elseif ($pesoG >=20001 && $pesoG <= 30000) {
+                echo "Bs. 1.058,79";
+            }
+        } elseif ($estadoOrigen != $estadoDestino) {
+            if($pesoG >=0 && $pesoG <= 500){
+                echo "Bs. 177,63";
+            }elseif ($pesoG >=501 && $pesoG <= 2000) {
+                echo "Bs. 260,94";
+            }elseif ($pesoG >=2001 && $pesoG <= 5000) {
+                echo "Bs. 498,67";
+            }elseif ($pesoG >=5001 && $pesoG <= 10000) {
+                echo "Bs. 633,12";
+            }elseif ($pesoG >=10001 && $pesoG <= 20000) {
+                echo "Bs. 1.023,97";
+            }elseif ($pesoG >=20001 && $pesoG <= 30000) {
+                echo "Bs. 1.453,20";
+            }
+        } elseif ($estadoOrigen == $estadoDestino && $municipioOrigen == $municipioDestino) {
+            if($pesoG >=0 && $pesoG <= 500){
+                echo "Bs. 110,59";
+            }elseif ($pesoG >=501 && $pesoG <= 2000) {
+                echo "Bs. 194,14";
+            }elseif ($pesoG >=2001 && $pesoG <= 5000) {
+                echo "Bs. 313,34";
+            }elseif ($pesoG >=5001 && $pesoG <= 10000) {
+                echo "Bs. 458,54";
+            }elseif ($pesoG >=10001 && $pesoG <= 20000) {
+                echo "Bs. 607,41";
+            }elseif ($pesoG >=20001 && $pesoG <= 30000) {
+                echo "Bs. 842,47";
+            }
         }
+        
     }
 
     if ($_POST['servicio'] == "LC") {

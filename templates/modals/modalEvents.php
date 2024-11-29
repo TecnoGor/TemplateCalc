@@ -42,21 +42,19 @@
 
                               UNION ALL
 
-                              SELECT DISTINCT ediEvents.EVENT_LOCAL_DT as fecha,
+                              SELECT ediEvents.EVENT_LOCAL_DT as fecha,
                                 eventInt.EVENT_TYPE_NM AS eventos,
                                 locationId.OFFICE_LONG_NM AS oficina
                               FROM 
-                                  L_MAILITM_EVENTS
+                                  N_EDI_MAILITMS 
                               JOIN 
-                                  N_EDI_MAILITMS ON L_MAILITM_EVENTS.MAILITM_FID = N_EDI_MAILITMS.MAILITM_FID
-                              JOIN 
-                                  N_EDI_MAILITM_EVENTS AS ediEvents ON N_EDI_MAILITMS.MAILITM_PID = ediEvents.MAILITM_PID
+                                  N_EDI_MAILITM_EVENTS AS ediEvents ON ediEvents.MAILITM_PID = N_EDI_MAILITMS.MAILITM_PID
                               JOIN 
                                   C_EVENT_TYPES AS eventInt ON ediEvents.EVENT_TYPE_CD = eventInt.EVENT_TYPE_CD
                               JOIN
                                 C_OFFICES AS locationId ON ediEvents.LOCATION_ID = locationId.OFFICE_FCD 
                               WHERE 
-                                  L_MAILITM_EVENTS.MAILITM_FID = 'UD727506523MY';";
+                                  N_EDI_MAILITMS.MAILITM_FID = '$searchInput';";
                 $stmtEvents = sqlsrv_query($conn, $sqlEvents);
                 // $stmtEvents->execute();
                 

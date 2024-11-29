@@ -1,6 +1,6 @@
-<div class="container w-50 bg-black bg-gradient bg-opacity-25 position-absolute top-50 start-50 translate-middle row g-3 p-3 border border-danger-subtle rounded">
+<div class="container w-50 bg-transparent position-absolute top-50 start-50 translate-middle row g-3 p-3 border border-danger-subtle rounded">
         
-    <div class="card">
+    <div class="card bg-black bg-gradient bg-opacity-25 border rounded">
         <div class="card-header">
             Tarifa
         </div>
