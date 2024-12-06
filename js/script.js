@@ -64,6 +64,8 @@ function searchEnv() {
           let codeOrigLower = codeOrig.toLowerCase();
           let codeDest = data.data.destCountryCode;
           let codeDestLower = codeDest.toLowerCase();
+          console.log(codeOrigLower);
+          console.log(codeDestLower);
           fetch('./assets/c_svg/' + codeOrigLower + '.svg')
             .then(response => response.text())
             .then(data => {
@@ -72,8 +74,8 @@ function searchEnv() {
                 const svgOrig = parserOrig.parseFromString(data, 'image/svg+xml');
                 const svgOrigElement = svgOrig.querySelector('svg');
 
-                svgOrigElement.setAttribute("width", "50px");
-                svgOrigElement.setAttribute("height", "20px");
+                svgOrigElement.setAttribute("width", "40px");
+                svgOrigElement.setAttribute("height", "30px");
 
                 document.getElementById('svgContainerOrig').innerHTML = svgOrigElement.outerHTML;
             })
@@ -87,7 +89,7 @@ function searchEnv() {
                 const svgDestElement = svgDest.querySelector('svg');
 
                 svgDestElement.setAttribute("width", "50px");
-                svgDestElement.setAttribute("height", "20px");
+                svgDestElement.setAttribute("height", "35px");
 
                 document.getElementById('svgContainerDest').innerHTML = svgDestElement.outerHTML;
             })
@@ -120,22 +122,67 @@ function searchEnv() {
       },
       success: function(data) {
           document.getElementById('modalContainerJs').innerHTML=data;
-          $(document).ready( function () {
-            $('#tableEventsQuery').DataTable({
-                "language": {
-                    "url": "./js/langDT.json"
-                },
-                pageLength: 5,
-                lengthMenu: [5, 10, 25, 50, 100]
-            })
-
-            $('#tableEventsQuery').css('font-size', '15px');
-          });
+          traducirTabla();
+          setTimeout(()=>{
+            $(document).ready( function () {
+              $('#tableEventsQuery').DataTable({
+                  "language": {
+                      "url": "./js/langDT.json"
+                  },
+                  pageLength: 5,
+                  lengthMenu: [5, 10, 25, 50, 100]
+              })
+  
+              $('#tableEventsQuery').css('font-size', '15px');
+            });
+          },
+            1000
+          )
+          
       }
     });
   }
   
 }
+
+// Función para traducir el contenido de la tabla
+function traducirTabla() {
+  const tabla = document.getElementById('tableEventsQuery'); // Selecciona la tabla
+  const celdas = tabla.getElementsByTagName('td'); // Obtiene todas las celdas
+
+  for (let i = 0; i < celdas.length; i++) {
+      const textoOriginal = celdas[i].innerText; // Obtiene el texto de la celda
+      traducirTexto(textoOriginal, (textoTraducido) => {
+          celdas[i].innerText = textoTraducido; // Actualiza la celda con la traducción
+      });
+  }
+}
+
+// Función para traducir texto usando una API
+function traducirTexto(texto, callback) {
+  const url = `https://translate-serverless.vercel.app/api/translate`;
+  
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ 
+      message: texto,
+      from: 'en',
+      to: 'es' 
+    }),
+  })
+      .then((data) => data.json())
+      .then((response) => {
+          const traduccion = response.translation.trans_result.dst; // Obtiene la traducción
+          callback(traduccion); // Llama al callback con la traducción
+      })
+      .catch(error => console.error('Error al traducir:', error));
+}
+
+
+
 
 function modalDevelop(){
   swal({
@@ -162,6 +209,11 @@ function modalEventQuery(){
       closeOnConfirm: false
     });
   } else {
-    $('#modalEventos').modal('show');  
+    // Llama a la función para traducir la tabla
+    setInterval(
+    2000
+    );
+    $('#modalEventos').modal('show');
+      
   }
 }
