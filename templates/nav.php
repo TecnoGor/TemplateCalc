@@ -17,13 +17,13 @@
 							<a href="" class="nav-link" style="font-size: 15px;"><i class="bi bi-house" style="font-size: 18px;"></i> Inicio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" onclick="containSearch()" aria-current="page" style="font-size: 15px;"><i class="bi bi-truck" style="font-size: 18px;"></i>       Rastreo Postal</a>
+							<a class="nav-link" onclick="containSearch()" aria-current="page" style="font-size: 15px; cursor: pointer;"><i class="bi bi-truck" style="font-size: 18px;"></i>       Rastreo Postal</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" onclick="servicesNationals()" style="font-size: 15px;"><i class="bi bi-map" style="font-size: 18px;"></i>      Servicios Nacionales</a>
+							<a class="nav-link" onclick="servicesNationals()" style="font-size: 15px; cursor: pointer;"><i class="bi bi-map" style="font-size: 18px;"></i>      Servicios Nacionales</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" onclick="servicesInternationals()" style="font-size: 15px;"><i class="bi bi-globe" style="font-size: 18px;"></i>      Servicios Internacionales</a>
+							<a class="nav-link" onclick="servicesInternationals()" style="font-size: 15px; cursor: pointer;"><i class="bi bi-globe" style="font-size: 18px;"></i>      Servicios Internacionales</a>
 						</li>
 					</ul>
 				</div>

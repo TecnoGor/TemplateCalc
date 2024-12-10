@@ -9,7 +9,7 @@
 
 							</li>
 							<li>Teléfono: 0800-IPOSTEL(4767835)</li>
-							<li>EmaiL: reclutamientoyseleccion@ipostel.gob.ve</li>
+							<!-- <li>EmaiL: reclutamientoyseleccion@ipostel.gob.ve</li> -->
 						</ul>
 						<div class="social-icons">
 							<span class="facebook">

@@ -1,10 +1,17 @@
 <?php
 
-    // include_once('conn.php');
+    include('conn.php');
 
-    $srvName = "10.16.12.169";
-    $db = "IPS5Db";
-    $conn = new PDO("sqlsrv:server=$srvName ; Database=$db", "api.rastreo", "Ipostel/123");
+    // $srvName = "10.16.12.169";
+    // $db = "IPS5Db";
+    // $options = [
+    //     // PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8, // Opcional: establece la codificación
+    //     // PDO::SQLSRV_ATTR_CONNECTION_POOLING => false, // Opcional: deshabilitar el agrupamiento de conexiones
+    //     // Agregar opciones de cifrado
+    //     "Encrypt" => true, // Habilitar cifrado
+    //     "TrustServerCertificate" => true // Confiar en el certificado del servidor
+    // ];
+    // $conn = new PDO("sqlsrv:server=$srvName ; Database=$db", "api.rastreo", "Ipostel/123");
 
     $buscar = $_POST['buscar'];
 
@@ -34,9 +41,11 @@
 
     // $result = sqlsrv_fetch_all($stmt, SQLSRV_FETCH_ASSOC);
 
-    $stmt = $conn->prepare($tsql);
-    $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    // $stmt = $conn->prepare($tsql);
+    // $stmt->execute();
+    // $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmtEvents = sqlsrv_query($conn, $tsql);
+    $result = sqlsrv_fetch_array($stmtEvents, SQLSRV_FETCH_ASSOC);
 
     if(empty($result)){
         $response = array('status' => false, 'msg' => 'Ningun envio encontrado');

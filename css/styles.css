@@ -7,6 +7,8 @@
 	--fourth-color: #2fd86a;
 	--background-color: #f9f5f0;
 	--dark-color: #151515;
+	--color-ipos-dark: #75364a; 
+	--color-ipos-claro: #ae5f7a;
 }
 
 html {
@@ -112,7 +114,7 @@ html {
 
 /* ************* NAVBAR ************* */
 .container-navbar {
-	background: linear-gradient(to top, var(--primary-color), #7c2930, var(--primary-color));
+	background: linear-gradient(to top, var(--color-ipos-dark), var(--color-ipos-claro), var(--color-ipos-dark));
 }
 
 .navbar {
@@ -761,7 +763,7 @@ html {
 /* ********************************** */
 
 .footer {
-	background-color: var(--primary-color);
+	background: linear-gradient(100deg, var(--color-ipos-dark), var(--color-ipos-dark), var(--color-ipos-claro), var(--color-ipos-dark), var(--color-ipos-dark));
 }
 
 .container-footer {

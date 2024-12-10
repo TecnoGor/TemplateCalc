@@ -8,6 +8,8 @@
         "UID" => "api.rastreo",
         "PWD" => "Ipostel/123",
         "CharacterSet" => "UTF-8",
+        "Encrypt" => true, // Habilitar cifrado
+        "TrustServerCertificate" => true
     );
 
     $conn = sqlsrv_connect($serverName,  $connInfo);

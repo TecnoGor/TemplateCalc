@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Calculadora Postal</title>
 		<link rel="shortcut icon" href="assets/img/favico_ipos.png" type="image/x-icon">
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.scss">
